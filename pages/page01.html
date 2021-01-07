@@ -7,7 +7,27 @@
     <title>Page 1</title>
 </head>
 <body>
-    <h1>wait until i add some content</h1>
-    <p><a href="../index.html">back</a></p>
+   <h1>Dynamic images</h1>
+   <p>
+        I'am learning how to make sites that can be acessed from many devices like PCs, Tablets,  <br> Smartphones our even Smart TVs all of these devices have different screen sizes.
+        <br> So I need to make sure the sites look good on all screen sizes, starting with the images
+   </p>
+
+   <p>
+    The image below may appear completely normal, but if you are viewing the site through your computer just try to resize your browser window
+   </p>
+
+   <picture>
+    <source media="(max-width:700px)" srcset="../images/foto-p.png" type="image/png">
+       <source media="(max-width: 1050px)" srcset="../images/foto-m.png" type="image/png">
+       <img src="../images/foto-g.png" alt="exemple image">
+   </picture>
+   <p>
+    Yes, it is true the image changes as you adjust the window size.
+    This feature is realy helpful. <br>
+    If you are accessing the site through a smartphone, the image probably has "P",
+    try to rotate the screen, you should now be seeing an "M"
+   </p>
+   <p> <a href="../index.html">back</a></p>
 </body>
 </html>
