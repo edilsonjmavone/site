@@ -1,19 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto:ital@0;1&display=swap");
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    background-color: rgba(88, 63, 63, 0.616);
+* {
+  padding: 0px;
 }
-h1{
-    text-align: center;
+
+p {
+  text-align: start;
 }
-h2{
-     text-align: center;
+ul {
+  text-align: center;
 }
-p{
-    text-align: center;
+h2 {
+  text-align: center;
 }
-ul{
-     text-align: center;
+a {
+  text-decoration-style: unset;
 }
-    
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  color: #fff;
+  background-image: linear-gradient(to bottom left, #289294 35%, #1f2527);
+}
+
+.globalCard {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+}
+.cardOne {
+  margin: 10px 0px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.welcomeCard {
+  width: 400px;
+  transition: all 0.5s linear;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+.welcomeCard:hover {
+  background-color: rgba(54, 54, 54, 0.397);
+  backdrop-filter: blur(3px);
+}
+
+.welcomeCard > p {
+  padding: 5px;
+  text-align: justify;
+  padding: 0px;
+}
+
+.cardTwo {
+  margin: 10px 0px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.aboutCard {
+  width: 350px;
+  height: fit-content;
+  padding: 0px 10px;
+  transition: all 0.5s linear;
+  border-radius: 10px;
+}
+
+.aboutCard:hover {
+  /* box-shadow: 0px 4px 5px rgb(0, 0, 0, 0.5); */
+  background-color: rgba(54, 54, 54, 0.397);
+  backdrop-filter: blur(3px);
+}
+
+.aboutCard > p,
+.aboutCard > h2 {
+  padding: 5px;
+  text-align: right;
+  padding: 0px;
+}
+
+.socialsBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
