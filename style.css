@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto:ital@0;1&display=swap");
 
-* {
-  padding: 0px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&family=Major+Mono+Display&family=Monoton&display=swap");
 
+:root {
+  --border-size: 1px;
+  --border-color: #030a0d;
+  --background-theme-w: hsl(210deg 5% 65%);
+  --nav-height: 2rem;
+  --vh: 1vh; /* Define variable for viewport height */
+  --headerAreaHeight: 2rem; /* Define variable for header area height */
+}
 p {
   text-align: start;
 }
@@ -14,54 +20,115 @@ h2 {
   text-align: center;
 }
 a {
-  text-decoration-style: unset;
-}
-body {
-  margin: 0px;
-  font-family: "Roboto", sans-serif;
-  font-size: 17px;
-  color: #fff;
-  background-image: linear-gradient(to bottom, #289294 80%, #24343a);
+  all: initial;
 }
 
-.start {
+* {
+  padding: 0px;
+  margin: 0px;
+  color: black;
+}
+
+body {
+  margin: 0px;
+  font-family: "Kode Mono", sans-serif;
+  font-size: 17px;
+  color: #fff;
+  background-color: #223a40;
+  background-color: #ffff;
+}
+/* #546B74 */
+
+.nav {
   margin: 0px;
   padding: 0px;
+  top: 0px;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 700px;
+  height: var(--nav-height);
   text-align: center;
-  background-image: repeating-linear-gradient(to top, #289294, #1f2527);
+  /* background-color: var(--background-theme-w); */
+  border-bottom: var(--border-size) solid var(--border-color);
+  backdrop-filter: blur(3px);
+  /* opacity: 0.4; */
+}
+.nav-title {
+  position: absolute;
+  left: 0.5rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Anta", sans-serif;
+  font-weight: 100;
+  /* background-color: rgba(108, 67, 34, 0.858); */
+}
+.pages-tray {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Anta", sans-serif;
+  font-weight: 100;
+  /* gap: 0.5rem; */
+  /* background-color: rgba(108, 67, 34, 0.858); */
+}
+.pages-tray > div,
+.pages-tray > a {
+  height: 100%;
+  /* background-color: var(--background-theme-w); */
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: var(--border-size) solid var(--border-color);
+  font-size: small;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .globalCard {
+  margin-top: var(--nav-height);
   width: 100%;
   height: 100%;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
+  /* background-image: linear-gradient(to bottom, #080F13,#304951,#546B74); */
 }
+
 .cardOne {
   margin: 10px 0px;
   padding: 15px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-between;
-
   gap: 2rem;
+  height: calc(var(--vh) * 100 - var(--headerAreaHeight));
 }
-
+.big-text-title {
+  position: absolute;
+  left: 1rem;
+  top: 10%;
+  font-size: 12vw;
+  white-space: nowrap;
+  font-family: "Major Mono Display", sans-serif;
+  font-weight: 600;
+}
 .welcomeCard {
   width: 400px;
   transition: all 0.5s linear;
   border-radius: 10px;
   padding: 0px 30px;
-}
-.welcomeCard:hover {
-  background-color: rgba(54, 54, 54, 0.397);
-  backdrop-filter: blur(3px);
 }
 
 .welcomeCard > p {
@@ -97,12 +164,6 @@ body {
   border-radius: 10px;
 }
 
-.aboutCard:hover {
-  /* box-shadow: 0px 4px 5px rgb(0, 0, 0, 0.5); */
-  background-color: rgba(54, 54, 54, 0.397);
-  backdrop-filter: blur(3px);
-}
-
 .aboutCard > p,
 .aboutCard > h2 {
   padding: 5px;
@@ -110,6 +171,9 @@ body {
   padding: 0px;
 }
 
+.footer {
+  height: calc(var(--vh) * 100 - var(--headerAreaHeight));
+}
 .socialsBar {
   display: flex;
   flex-direction: row;

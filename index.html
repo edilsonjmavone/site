@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="start"><h2>welcome</h2></div>
-    <div class="globalCard">
+    <nav class="nav">
+      <div class="nav-title">
+        <div>Edilson's Portfolio</div>
+      </div>
+      <div class="pages-tray">
+        <div class="home-page-btn">HOME</div>
+        <div class="about-page-btn">ABOUT</div>
+        <div class="projects-page-btn">PROJECTS</div>
+        <a href="#footer">
+          <div class="contact-page-btn">CONTACT</div>
+        </a>
+      </div>
+    </nav>
+    <main class="globalCard">
       <div class="cardOne">
+        <div class="big-text-title">Welcome</div>
+
         <div class="welcomeCard">
           <p>
             This is my personal site <br />
@@ -27,41 +41,7 @@
           </p>
         </div>
 
-        <div class="projectsCard">
-          <ul type="none">
-            <li>
-              <abbr title="Dynamic Images concept"
-                ><a href="pages/page01.html" target="_self" rel="next"
-                  >Dynamic images</a
-                ></abbr
-              >
-            </li>
-            <li>
-              <abbr title="page 2"
-                ><a href="pages/page02.html" target="_self" rel="next"
-                  >page 2</a
-                ></abbr
-              >
-            </li>
-            <li>
-              <abbr title="page 3"
-                ><a href="pages/page03.html" target="_self" rel="next"
-                  >page 3</a
-                ></abbr
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="space"></div>
-      <div class="AboutMe" id="AboutMe">
-        <h2>About Me</h2>
-      </div>
-      <div class="space"></div>
-
-      <div class="cardTwo">
         <div class="aboutCard">
-          <!-- <h2>About</h2> -->
           <p>
             Hello my name is <strong>Edilson Jose Mavone</strong> <br />
             I'm 16 years old and when i was kid i fell in love for technology,
@@ -71,27 +51,9 @@
             website (I think)
           </p>
         </div>
-        <div class="langsCard">
-          <p><strong>Currentily learning</strong></p>
-          <img
-            src="./svg/javascript_FILL0_wght400_GRAD0_opsz48.svg"
-            alt="JavaScript"
-          />
-          <img src="./svg/html_FILL0_wght400_GRAD0_opsz48.svg" alt="HTML" />
-          <img src="./svg/css_FILL0_wght400_GRAD0_opsz48.svg" alt="CSS" />
-        </div>
       </div>
-      <div class="space"></div>
 
-      <!--
-    <p>
-        <picture>
-            <source media="(max-width: 500px )" srcset="images/perfil-200.png" type="image/png">
-            <img src="images/perfil.png" alt="me photo">
-        </picture>
-    </p>
--->
-      <footer>
+      <footer class="footer" id="footer">
         <h2>My Socials</h2>
         <div class="socialsBar">
           <div>
@@ -118,6 +80,6 @@
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   </body>
 </html>
