@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../images/fav.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/fav.ico" type="image/x-icon" />
     <title>Page 2</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <h1>wait until i add some content</h1>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        cursor: none; /* Hide the default cursor */
+      }
+      /* CSS for custom cursor */
+      .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px; /* Adjust size as needed */
+        height: 20px; /* Adjust size as needed */
+        border-radius: 50%;
+        background-color: #434343; /* Adjust color as needed */
+        pointer-events: none; /* Ensures the cursor doesn't interfere with mouse events */
+        z-index: 9999; /* Ensures the cursor is above other content */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
     <p><a href="../index.html">back</a></p>
-</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+      document.body.style.cursor = "none";
+      // GSAP animation for custom cursor
+      const cursor = document.querySelector(".custom-cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        gsap.to(cursor, {
+          x: e.clientX - 9,
+          y: e.clientY - 9,
+          duration: 0.2,
+          ease: "sin.inOut", // Adjust easing as needed
+        });
+      });
+    </script>
+  </body>
 </html>
