@@ -1,17 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto:ital@0;1&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&family=Major+Mono+Display&family=Monoton&display=swap");
 
 :root {
   --border-size: 1px;
   --border-color: #030a0d;
-  --background-theme-w: hsl(210deg 5% 65%);
+  --background-theme-w: #ffffff;
   --nav-height: 2rem;
   --vh: 1vh; /* Define variable for viewport height */
   --headerAreaHeight: 2rem; /* Define variable for header area height */
+  --text-color: black;
 }
 p {
   text-align: start;
+  line-height: 26px;
 }
 ul {
   text-align: center;
@@ -26,7 +28,7 @@ a {
 * {
   padding: 0px;
   margin: 0px;
-  color: black;
+  color: var(--text-color);
 }
 
 body {
@@ -63,7 +65,8 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-family: "Anta", sans-serif;
-  font-weight: 100;
+  /* font-family: Major Mono Display, sans-serif; */
+  font-weight: 200;
   /* background-color: rgba(108, 67, 34, 0.858); */
 }
 .pages-tray {
@@ -107,7 +110,7 @@ body {
   );
   overflow: hidden;
   background-color: var(--background-theme-w);
-  margin: 0.5rem;
+  margin: 0.9rem;
   border: var(--border-size) solid var(--border-color);
   /* border-top: none; */
   /* box-shadow: -3px 3px 0px 0px #242424a2; */
@@ -125,7 +128,7 @@ body {
 .content > p {
   width: 90%;
   text-align: center;
-  margin: 1rem;
+  /* margin: 1rem; */
   /* margin: auto; */
 }
 .cardOne {
@@ -148,6 +151,88 @@ body {
   font-weight: 600;
 }
 
+.homeContent {
+  margin: 40px;
+  padding: 20px;
 
+  margin-left: 40px;
+  margin-right: 40px;
+
+  width: 64rem;
+  max-width: 65rem;
+  min-width: 310px;
+  /* background-color: rgba(127, 255, 212, 0.589); */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.textContent {
+  width: 460px;
+  font-weight: 500;
+  font-family: "Kode Mono", sans-serif;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.textContent > h2 {
+  font-size: 3rem;
+  font-family: "Major Mono Display", sans-serif;
+  font-weight: 800px;
+}
+.textContent > p {
+  padding-left: 2rem;
+}
+
+.techStacksList {
+  width: 300px;
+  height: 200px;
+  border: 2px solid #b49a9a;
+  border-radius: 3px;
+}
 
 /* use media querys mobile and tablet size */
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  /* Your desktop styles here */
+  * {
+    background-color: rgba(0, 0, 255, 0.2);
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 425px) and (max-width: 1023px) {
+  /* tablet styles here */
+  * {
+    background-color: rgba(255, 166, 0, 0.2);
+  }
+  .homeContent {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    /* flex-wrap: wrap; */
+  }
+  .textContent {
+    max-width: 615px;
+    width: 100%;
+    font-weight: 500;
+    /* font-family: "Manrope", sans-serif; */
+
+    /* height: 30px; */
+    /* background-color: rgba(211, 95, 42, 0.589); */
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+  /* Your mobile styles here */
+  * {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+}
