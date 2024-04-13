@@ -131,25 +131,6 @@ body {
   /* margin: 1rem; */
   /* margin: auto; */
 }
-.cardOne {
-  margin: 10px 0px;
-  padding: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.big-text-title {
-  /* position: absolute; */
-  margin-left: 1rem;
-  font-size: 12vw;
-  white-space: nowrap;
-  font-family: "Major Mono Display", sans-serif;
-  font-weight: 600;
-}
 
 .homeContent {
   margin: 40px;
@@ -188,19 +169,37 @@ body {
 }
 
 .techStacksList {
-  width: 300px;
-  height: 200px;
-  border: 2px solid #b49a9a;
+  width: 400px;
+  height: 400px;
+  /* border: 2px solid #b49a9a; */
   border-radius: 3px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* this declarations define the svg elements behavior  */
+#parentSVG {
+  width: 180px;
+  height: 180px;
+}
+#pathToChange {
+  filter: grayscale(100%) brightness(10%);
+  transition: filter 300ms ease;
+}
+#parentSVG:hover > #pathToChange {
+  filter: none;
 }
 
 /* use media querys mobile and tablet size */
 /* Desktop */
 @media only screen and (min-width: 1024px) {
   /* Your desktop styles here */
-  * {
+  /* * {
     background-color: rgba(0, 0, 255, 0.2);
-  }
+  } */
 }
 
 /* Tablet */
@@ -232,7 +231,7 @@ body {
 /* Mobile */
 @media only screen and (max-width: 425px) {
   /* Your mobile styles here */
-  * {
+  /* * {
     background-color: rgba(255, 0, 0, 0.2);
-  }
+  } */
 }
