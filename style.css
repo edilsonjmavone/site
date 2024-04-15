@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@472&family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto:ital@0;1&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&family=Major+Mono+Display&family=Monoton&display=swap");
 
@@ -159,9 +159,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
-.textContent > h2 {
-  font-size: 3rem;
+.textContent > .title {
+  font-size: 4rem;
   font-family: "Major Mono Display", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-weight: 800px;
 }
 .textContent > p {
@@ -191,6 +194,19 @@ body {
 }
 #parentSVG:hover > #pathToChange {
   filter: none;
+}
+
+/* About Content */
+.aboutContent {
+  margin: 40px;
+  padding: 20px;
+
+  margin-left: 40px;
+  margin-right: 40px;
+
+  width: 64rem;
+  max-width: 65rem;
+  min-width: 310px;
 }
 
 /* use media querys mobile and tablet size */
