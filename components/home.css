@@ -1,0 +1,90 @@
+
+.homeContent {
+  margin: 40px;
+  padding: 20px;
+
+  margin-left: 40px;
+  margin-right: 40px;
+
+  width: 64rem;
+  max-width: 65rem;
+  min-width: 310px;
+  /* background-color: rgba(127, 255, 212, 0.589); */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.textContent {
+  width: 460px;
+  font-weight: 500;
+  font-family: "Kode Mono", sans-serif;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.textContent > .title {
+  font-size: 4rem;
+  font-family: "Major Mono Display", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800px;
+}
+.textContent > p {
+  padding-left: 2rem;
+}
+
+.techStacksList {
+  width: 400px;
+  height: 400px;
+  /* border: 2px solid #b49a9a; */
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* this declarations define the svg elements behavior  */
+#parentSVG {
+  width: 180px;
+  height: 180px;
+}
+#pathToChange {
+  filter: grayscale(100%) brightness(10%);
+  transition: filter 300ms ease;
+}
+#parentSVG:hover > #pathToChange {
+  filter: none;
+}
+
+
+@media only screen and (min-width: 425px) and (max-width: 1023px) {
+  /* tablet styles here */
+  /* * {
+    background-color: rgba(255, 166, 0, 0.2);
+  } */
+  .homeContent {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    /* flex-wrap: wrap; */
+  }
+  .textContent {
+    max-width: 615px;
+    width: 100%;
+    font-weight: 500;
+    /* font-family: "Manrope", sans-serif; */
+    /* height: 30px; */
+    /* background-color: rgba(211, 95, 42, 0.589); */
+  }
+
+}
