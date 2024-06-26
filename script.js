@@ -1,4 +1,12 @@
-<div class="homeContent">
+const homePageBtn = document.getElementsByClassName("home-page-btn")[0];
+
+const aboutPageBtn = document.getElementsByClassName("about-page-btn")[0];
+
+const main = document.querySelector("#content")
+
+homePageBtn.addEventListener("click", (e)=>{
+    console.log("I'm home !!!")
+    main.innerHTML = `<div class="homeContent">
   <div class="textContent">
     <div class="title">$whoami</div>
     <p>
@@ -101,4 +109,44 @@
       </g>
     </svg>
   </div>
-</div>
+</div>`;
+
+})
+
+aboutPageBtn.addEventListener("click",(e)=>{
+    main.innerHTML = `<div class="aboutContent">
+          <div class="title">$whoami</div>
+          <div class="contentFrame">
+            <div class="aboutContentGridItems aboutText">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
+                consequatur? Recusandae voluptates error et expedita ipsum
+                molestiae eum atque. Animi soluta ab inventore minima illo,
+                harum laboriosam, unde quos culpa placeat beatae dolorum quis!
+                Mollitia sint eligendi, iusto veniam molestias sed? Non vitae,
+                recusandae ullam voluptate reiciendis laudantium ab quasi beatae
+                quae repellendus excepturi asperiores quis voluptates
+                distinctio, iusto obcaecati nobis fugiat quaerat itaque soluta
+                facilis. Amet vel obcaecati nulla quibusdam quod omnis autem ex
+                dignissimos eaque laudantium, non blanditiis? Nam optio nostrum
+                dolorem! Asperiores dolorem doloribus exercitationem totam ut,
+                inventore vero maiores odio corrupti molestias nemo porro velit?
+                Iste. soluta facilis. Amet vel obcaecati nulla quibusdam quod
+                omnis autem ex dignissimos eaque laudantium, non blanditiis? Nam
+                optio nostrum dolorem! Asperiores dolorem doloribus
+                exercitationem totam ut, inventore vero maiores odio corrupti
+                molestias nemo porro velit?
+              </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="aboutContentGridItems contactsText">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quia dolorem cumque dignissimos esse nobis vero dolor rerum sequi repudiandae? </p>
+            </div>
+
+          </div>
+        </div>
+`;
+})
+// home-page-btns

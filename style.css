@@ -122,7 +122,7 @@ body {
   height: calc(100% - var(--nav-height));
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 
   /* background-color: #030a0d; */
 }
@@ -132,6 +132,7 @@ body {
   margin: 40px;
   margin-left: 40px;
   margin-right: 40px;
+  padding: 20px;
 
   width: 70rem;
   min-width: 310px;
@@ -210,6 +211,10 @@ body {
   /* * {
     background-color: rgba(255, 166, 0, 0.2);
   } */
+  .aboutContent{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
 
   .contentFrame {
     flex-direction: column;
