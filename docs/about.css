@@ -1,0 +1,124 @@
+/* About Content */
+.aboutContent {
+  margin: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 20px;
+
+  width: 70rem;
+  min-width: 310px;
+  /* height: 550px; */
+  display: flex;
+
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+.contentFrame {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aboutContent > .title {
+  font-size: 4rem;
+  font-family: "Major Mono Display", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800px;
+  
+}
+
+.aboutText {
+  /* background-color: rgba(185, 33, 33, 0.575); */
+  width: 60%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.aboutText::-webkit-scrollbar {
+  display: none;
+}
+
+.aboutText p {
+  width: 80%;
+  margin-top: 0.5rem;
+  margin: 0.5rem;
+  text-align: justify;
+}
+.contactsText {
+  /* background-color: rgba(33, 167, 185, 0.534); */
+  height: 90%;
+  width: 40%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+.contactsText p {
+  width: 80%;
+  height: fit-content;
+}
+.line {
+  width: 2px;
+  background-color: #000000;
+  height: 80%;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Desktop styles here */
+  /* * {
+    background-color: rgba(0, 0, 255, 0.2);
+  } */
+}
+
+@media only screen and (min-width: 425px) and (max-width: 1023px) {
+  /* tablet styles here */
+  /* * {
+    background-color: rgba(255, 166, 0, 0.2);
+  } */
+  .aboutContent {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .contentFrame {
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    gap: 2rem;
+  }
+  .line {
+    display: none;
+  }
+  .aboutText {
+    background-color: #40a7c7c4;
+    width: 100%;
+    height: fit-content;
+    overflow: visible;
+  }
+  .aboutText p {
+    text-align: left;
+  }
+  .contactsText {
+    background-color: #40a7c7c4;
+    height: 38%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  /* Mobile styles here */
+  * {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+}
